@@ -22,52 +22,52 @@ INDEX_CAPTION = bool(environ.get('INDEX_CAPTION', False))
 COVER = bool(environ.get('COVER', False))
 PICS = (environ.get('PICS', 'https://i.ibb.co/PzZNZHF6/IMG-20251116-113905-254.jpg https://i.ibb.co/8npWSZ5T/pic.jpg')).split()
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://i.ibb.co/2769f1rF/photo-2025-09-03-14-48-34-7548400762112442372.jpg")
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '8747490676').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1004435548604').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003949564466'))
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003965015923'))
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003701301311'))
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1004218490165').split()]
-AUTH_CHANNELS = [int(ch) for ch in environ.get("AUTH_CHANNELS", "-1003748603064").split() if ch and id_pattern.match(ch)]
-AUTH_REQ_CHANNELS = [int(ch) for ch in environ.get("AUTH_REQ_CHANNELS", "-1004295925966").split() if ch and id_pattern.match(ch)]
-REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "-1004418130323")) and id_pattern.search(ch) else None
-SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "4293982912")) and id_pattern.search(ch) else None
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1255023013').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', ''))
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', ''))
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
+AUTH_CHANNELS = [int(ch) for ch in environ.get("AUTH_CHANNELS", "").split() if ch and id_pattern.match(ch)]
+AUTH_REQ_CHANNELS = [int(ch) for ch in environ.get("AUTH_REQ_CHANNELS", "").split() if ch and id_pattern.match(ch)]
+REQST_CHANNEL = int(ch) if (ch := environ.get("REQST_CHANNEL", "")) and id_pattern.search(ch) else None
+SUPPORT_CHAT_ID = int(ch) if (ch := environ.get("SUPPORT_CHAT_ID", "")) and id_pattern.search(ch) else None
 
-OWNER = int(os.environ.get("OWNER", "8747490676"))
-CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/CineqaroUpdateChannel')
-GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/CineqaroSupportGroup')
+OWNER = int(os.environ.get("OWNER", "1255023013"))
+CHANNEL_LINK = environ.get('CHANNEL_LINK', 'https://telegram.me/Techifybots')
+GROUP_LINK = environ.get('GROUP_LINK', 'https://telegram.me/TechifySupport')
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://infinity-linker:infinity-linker-5853@cluster0.w3uex4d.mongodb.net/?appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "CineqaroBot_db")
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "filter")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'files')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False)
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 
-UPDATE_NOTIFICATION = bool(environ.get('UPDATE_NOTIFICATION', True))
-UPDATE_CHANNEL = int(environ.get('UPDATE_CHANNEL', '-1004342029278'))
+UPDATE_NOTIFICATION = bool(environ.get('UPDATE_NOTIFICATION', False))
+UPDATE_CHANNEL = int(environ.get('UPDATE_CHANNEL', ''))
 IMAGE_FETCH = bool(environ.get('IMAGE_FETCH', True))
-LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', True))
-ABOVE_PREVIEW = bool(environ.get('ABOVE_PREVIEW', True))
+LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', False))
+ABOVE_PREVIEW = bool(environ.get('ABOVE_PREVIEW', False))
 TMDB_API_KEY = environ.get('TMDB_API_KEY', '')
 TMDB_POSTER = bool(environ.get('TMDB_POSTER', True))
 LANDSCAPE_POSTER = bool(environ.get('LANDSCAPE_POSTER', True))
 
-IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1004387499616'))
+IS_VERIFY = is_enabled('IS_VERIFY', False)
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', ''))
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://i.ibb.co/xqNtSMpS/photo-2025-09-18-15-24-38-7551450511015149572.jpg")
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/TechifyBots")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/TechifyBots")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/TechifyBots")
-SHORTENER_API = environ.get("SHORTENER_API", "fe5e689e49f014fbfc697849512a604564006c39")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "cuty.io")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "3cd0d6f8f5abfdb64341f77a88d3fb6b1f6851b7")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "gplinks.com")
-SHORTENER_API3 = environ.get("SHORTENER_API3", "5e8e89dab9a9e7f78de495dd112390aa678b14fe")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "arolinks.com")
+SHORTENER_API = environ.get("SHORTENER_API", "a7ac9b3012c67d7491414cf272d82593c75f6cbb")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "omegalinks.in")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "a7ac9b3012c67d7491414cf272d82593c75f6cbb")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "omegalinks.in")
+SHORTENER_API3 = environ.get("SHORTENER_API3", "a7ac9b3012c67d7491414cf272d82593c75f6cbb")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "omegalinks.in")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 
-FAST_MODE = is_enabled(environ.get('FAST_MODE', "True"), True)
+FAST_MODE = is_enabled(environ.get('FAST_MODE', "False"), False)
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 MAX_BTNS = environ.get("MAX_BTNS", "5")
 MSG_ALRT = environ.get('MSG_ALRT', '𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖬𝖾 ♥️')
@@ -78,7 +78,7 @@ MAX_LIST_ELM = int(environ.get("MAX_LIST_ELM") or 10) or None # Maximum number o
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
-TMDB_ON_SEARCH = is_enabled((environ.get('TMDB_ON_SEARCH', "True")), True)
+TMDB_ON_SEARCH = is_enabled((environ.get('TMDB_ON_SEARCH', "False")), False)
 AUTO_FILTER = is_enabled((environ.get('AUTO_FILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
@@ -87,7 +87,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PM_SEARCH = bool(environ.get('PM_SEARCH', False))
 EMOJI_MODE = bool(environ.get('EMOJI_MODE', True))
-BUTTON_MODE = is_enabled((environ.get('BUTTON_MODE', "True")), True)
+BUTTON_MODE = is_enabled((environ.get('BUTTON_MODE', "False")), False)
 STREAM_MODE = bool(environ.get('STREAM_MODE', True))
 PREMIUM_STREAM_MODE = bool(environ.get('PREMIUM_STREAM_MODE', False))
 MAINTENANCE = is_enabled(environ.get('MAINTENANCE', "False"), False)
